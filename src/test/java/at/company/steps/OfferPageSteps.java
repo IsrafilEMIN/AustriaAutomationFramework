@@ -10,7 +10,7 @@ import org.testng.Assert;
 public class OfferPageSteps {
 
     // We don't initialize it yet. We do it inside the method.
-    AtlasOfferPage offerPage;
+    AtlasOfferPage offerPage =  new AtlasOfferPage();
 
     @Given("the user is on the Atlas Paint homepage")
     public void userOnHomePage() {
@@ -26,7 +26,7 @@ public class OfferPageSteps {
 
     @Then("the page headline should be {string}")
     public void verifyHeadline(String expectedHeadline) {
-        String actualHeadline = offerPage.getHeadline3Text();
+        String actualHeadline = offerPage.getHeadline1Text();
         // We use ignoring case because CSS usually capitalizes text
         Assert.assertTrue(actualHeadline.equalsIgnoreCase(expectedHeadline),
                 "Headline mismatch! Expected: " + expectedHeadline + ", Found: " + actualHeadline);
