@@ -7,10 +7,9 @@
         <listener class-name="at.company.listeners.TestListener"/>
     </listeners>
 
-    <test name="Login Tests">
+    <test name="BDD Tests">
         <classes>
-            <class name="at.company.tests.LoginTest"/>
+            <class name="at.company.runners.CucumberRunner"/>
         </classes>
     </test>
-
 </suite>
