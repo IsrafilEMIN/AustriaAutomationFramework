@@ -14,10 +14,8 @@ public class OfferPageSteps {
 
     @Given("the user is on the Atlas Paint homepage")
     public void userOnHomePage() {
-        // Hooks class already opened the browser and went to the URL
-        // So we just verify we are there
-        String title = DriverManager.getDriver().getTitle();
-        Assert.assertTrue(title.contains("Homeowner's Trusted Painter"), "Not on Atlas Offer Page!");
+        String title = offerPage.getHeadlineText();
+        Assert.assertTrue(title.contains("Book a Call"), "Not on Atlas Offer Page!");
     }
 
     @When("the user navigates to the offers section")
